@@ -1,0 +1,13 @@
+.container-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;;
+ }
+ .container-main-child {
+     display: flex;
+     width:800px;
+     flex-direction: column;
+     
+     flex-wrap: wrap;  
+ }
+ 

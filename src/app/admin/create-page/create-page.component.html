@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <h1>Crate post</h1>
+  <div class="form-group" [ngClass]="{invalid: form.get('title').touched && form.get('title').invalid}">
+    <label for="title">Post Name</label>
+    <input type="text" id="title"  formControlName="title">
+
+    <div *ngIf="form.get('title').touched && form.get('title').invalid">
+      <small *ngIf="form.get('title').errors.required">Введите поле title</small>
+    </div>
+  </div>
+<!-- a-->
+  <div>
+    <label>Content Post</label>
+    <quill-editor formControlName="text"></quill-editor>
+  </div>
+<!--a -->
+  <div class="form-group" [ngClass]="{invalid: form.get('author').touched && form.get('author').invalid}">
+    <label for="title">Auto Paste</label>
+    <input type="text" id="author"  formControlName="author">
+
+    <div *ngIf="form.get('author').touched && form.get('author').invalid">
+            <small *ngIf="form.get('author').errors.required">Введите поле author</small>
+    </div>
+  </div>
+  <button type="submit" [disabled]="form.invalid">Create Post</button>
+</form>

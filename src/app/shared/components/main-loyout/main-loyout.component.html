@@ -1,0 +1,10 @@
+<div class="container-flex">
+    <header class="container-head">
+      <ul>
+        <li><a [routerLink]="['/']" class="logo" >GITS</a></li>
+        <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> Home</a></li>
+      </ul>     
+    </header>
+    
+      <router-outlet></router-outlet>
+</div>

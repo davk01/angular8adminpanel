@@ -1,0 +1,12 @@
+<div class="container-main">
+        <div class="container-main-child"> 
+          <div class="cards-group" *ngFor='let post of postsService.posts' >
+            <div class="cards">
+              <small>{{post.data}}</small>
+              <img src="{{post.image}}" alt="">
+              <h3>{{post.title}}</h3>
+              <p class="truncate">{{post.text}}</p>
+              <button [routerLink]="['/blog/',post.id]">Post</button>          
+          </div>
+        </div>
+      </div>  

@@ -1,0 +1,19 @@
+<nav>
+    <h1>
+        <a [routerLink]="['/']">Angular Admin</a>
+    </h1>
+    <ul *ngIf="auth.isAuthemticated()">
+        <li >
+            <a [routerLink]="['/admin', 'dashboard']" routerLinkActive="active">Home</a>
+        </li>
+        <li >
+            <a [routerLink]="['/admin', 'create']" routerLinkActive="active"> Create</a>
+        </li>
+        <li>
+            <a href='#' (click)="logout($event)" >Logout</a>
+        </li>
+    </ul>
+</nav>
+<div >
+    <router-outlet></router-outlet>
+</div>
